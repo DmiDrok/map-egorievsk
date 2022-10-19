@@ -1,0 +1,186 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	position: relative;
+	left: 0;
+	top: 0;
+}
+
+html, body {
+	height: 100%;
+	overflow: hidden;
+	min-width: 1000px;
+}
+
+body {
+	font-family: "Georgia";
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	height: 100vh;
+}
+
+.wrapper {
+	position: relative;
+	display: inline-flex;
+    align-items: center;
+}
+
+.wrapper .container {
+	position: relative;
+	box-shadow: 0 0 5px 0 rgba(100, 100, 100, .4);
+	display: flex;
+}
+
+.wrapper .map {
+	margin: 0 auto;
+	cursor: grab;
+}
+
+.wrapper .map:active {
+	cursor: grabbing;
+}
+
+.landmark {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 30px;
+	height: 30px;
+	z-index: 100;
+}
+
+.landmark_1 {
+	left: 590px;
+	top: 255px;
+}
+
+.landmark_2 {
+	left: 670px;
+	top: 315px;
+}
+
+.landmark_3 {
+	left: 545px;
+	top: 310px;
+}
+
+.landmark_4 {
+	left: 630px;
+	top: 310px;
+}
+
+.landmark_5 {
+	left: 630px;
+	top: 275px;
+}
+
+.landmark_6 {
+	left: 690px;
+	top: 400px;
+}
+
+.landmark_7 {
+	left: 655px;
+	top: 355px;
+}
+
+.landmark_8 {
+	left: 505px;
+	top: 190px;
+}
+
+.about_2 .about__photo img , .about_8 .about__photo img {
+	object-fit: unset;
+}
+
+.landmark img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	object-fit: cover;
+	cursor: pointer;
+}
+
+.about {
+	position: absolute;
+	left: -15000px;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(100, 100, 100, .5);
+	z-index: 100;
+	opacity: 0;
+	transition-duration: .7s;
+	transition-property: opacity;
+}
+
+.about.active {
+	left: 0;
+	opacity: 1;
+}
+
+.about .container {
+	width: 750px;
+	height: 350px;
+	background-color: #fff;
+	box-shadow: 0 0 5px 5px rgba(100, 100, 100, .4);
+	border-radius: 5px;
+	padding: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -175px;
+	margin-left: -375px;
+	display: flex;
+}
+
+.about__row {
+	display: grid;
+	grid-template-columns: 50% auto;
+	grid-column-gap: 20px;
+}
+
+.about__photo {
+	position: relative;
+}
+
+.about__photo img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+	object-fit: cover;
+}
+
+.about__text {
+	display: flex;
+	flex-direction: column;
+/*	overflow-y: scroll;*/
+}
+
+.about__text h3 {
+	font-size: 26px;
+	text-decoration: underline;
+}
+
+.about__text p {
+	margin: 20px 0 0 0;
+}
+
+.about__close {
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+.about__close:hover {
+	color: orangered;
+}
