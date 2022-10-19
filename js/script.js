@@ -1,4 +1,5 @@
 let map = document.documentElement;
+let objs = Array.from(document.querySelectorAll(".about"));
 const minZoom = 1;
 const maxZoom = 3;
 const minZoomToOffset = 1.5;
@@ -17,10 +18,9 @@ function getDirection(event) {
 }
 
 // Задать приближение к карте
-function setZoomMap(z) {
-	if (zoom > minZoomToOffset)
-		map.style.transform = `scale(${z})`
-	else {
+function setZoomMap(z, direction) {
+	map.style.transform = `scale(${z})`
+	if (zoom < minZoomToOffset && direction == "down") {
 		map.style.transform = "scale(1)";
 		setOffsetMap(0, 0);
 	}
@@ -45,9 +45,11 @@ function setOffsetMap(xOffset, yOffset) {
 
 // Событие на прокрутку колеса на приближение / отдаление карты
 document.addEventListener("wheel", function(event) {
-	let direction = getDirection(event);
-	setCorrectZoom(direction); // Меняем переменную zoom
-	setZoomMap(zoom); // Устанавливаем приближение для карты
+	if (!objs.some(item => item.classList.contains("active"))) {
+		let direction = getDirection(event);
+		setCorrectZoom(direction); // Меняем переменную zoom
+		setZoomMap(zoom, direction); // Устанавливаем приближение для карты
+	}
 });
 
 // Начало перетаскивания карты - ставим статус в true

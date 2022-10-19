@@ -1,5 +1,5 @@
-const landmarks = document.querySelectorAll(".landmark");
-const landmarksAbout = document.querySelectorAll(".about");
+let landmarks = document.querySelectorAll(".landmark");
+let landmarksAbout = document.querySelectorAll(".about");
 
 // Прослушка клика на документ и закрытие всплывающего окна
 document.addEventListener("click", function(event) {
@@ -14,6 +14,11 @@ let nowActive = null;
 function showInfo(elem) {
 	elem.classList.add("active");
 	nowActive = elem;
+	// Отдаляем документ
+	map.style.transform = "";
+	map.style.left = "";
+	map.style.top = "";
+	zoom = 1;
 }
 
 // Скрыть информацию
