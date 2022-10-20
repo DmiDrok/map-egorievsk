@@ -13,6 +13,17 @@ function setInfoWidthMax() {
 	}
 }
 
+// Установить нормальный размер текста в описании памятника
+function setCorrectHeightText() {
+	let landmarksAbout = document.querySelectorAll(".about .container");
+	for (let land of landmarksAbout) {
+		let header = land.querySelector("h3");
+		let content = land.querySelector(".content");
+		let correctHeight = land.clientHeight - parseFloat(getComputedStyle(land).paddingTop)*2 - header.clientHeight - parseFloat(getComputedStyle(content).marginTop)
+		content.style.height = correctHeight + "px";
+	}
+}
+
 // Запуск настраивающих функций
 try {
 	// Настройка контента будет производиться при изменении размеров экрана браузера
@@ -22,6 +33,7 @@ try {
 	});
 	setInfoWidthMax();
 	setContentAllMax();
+	setCorrectHeightText();
 } catch(err) {
 	console.error(err);
 }
