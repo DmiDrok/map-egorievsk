@@ -36,6 +36,15 @@ body {
 	display: flex;
 }
 
+
+.container__dark {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(100, 100, 100, .5);
+	z-index: 90;
+}
+
 .wrapper .map {
 	margin: 0 auto;
 	cursor: grab;
@@ -49,53 +58,30 @@ body {
 	position: absolute;
 	left: 0;
 	top: 0;
-	width: 30px;
-	height: 30px;
+	width: 50px;
+	height: 50px;
 	z-index: 100;
 }
 
 .landmark_1 {
-	left: 590px;
-	top: 255px;
+	left: 358px;
+	top: 128px;
 }
 
 .landmark_2 {
-	left: 670px;
-	top: 315px;
+	left: 510px;
+	top: 330px;
 }
+
 
 .landmark_3 {
-	left: 545px;
-	top: 310px;
-}
-
-.landmark_4 {
-	left: 630px;
-	top: 310px;
-}
-
-.landmark_5 {
-	left: 630px;
-	top: 275px;
-}
-
-.landmark_6 {
-	left: 690px;
-	top: 400px;
-}
-
-.landmark_7 {
-	left: 655px;
-	top: 355px;
+	left: 605px;
+	top: 465px;
 }
 
 .landmark_8 {
-	left: 505px;
-	top: 190px;
-}
-
-.about_2 .about__photo img , .about_8 .about__photo img {
-	object-fit: unset;
+	left: 685px;
+	top: 400px;
 }
 
 .landmark img {
@@ -161,16 +147,23 @@ body {
 .about__text {
 	display: flex;
 	flex-direction: column;
-/*	overflow-y: scroll;*/
+	/*overflow-y: scroll;*/
+}
+
+.about__text .content {
+	max-height: 260px;
+	overflow-y: scroll;
+	margin: 10px 0 0 0;
+	text-indent: 15px;
+}
+
+.about__text p:not(:first-child) {
+	margin: 10px 0 0 0;
 }
 
 .about__text h3 {
 	font-size: 26px;
 	text-decoration: underline;
-}
-
-.about__text p {
-	margin: 20px 0 0 0;
 }
 
 .about__close {
@@ -183,4 +176,12 @@ body {
 
 .about__close:hover {
 	color: orangered;
+}
+
+.about_2 .content {
+	max-height: 240px;
+}
+
+.about_3 .content {
+	max-height: 240px;
 }
