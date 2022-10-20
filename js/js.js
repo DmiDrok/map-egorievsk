@@ -42,3 +42,31 @@ for (let i = 0; i < landmarks.length; i++) {
 		}
 	});
 }
+
+let menu = document.querySelector(".menu");
+let showDirection = document.querySelector("input[name='show-direction']")
+let mapImage = document.querySelector(".map");
+let defaultImage = "./images/city_direction.png";
+let directionImage = "./images/city3.png";
+
+function showMenuOnMouseOver() {
+	menu.classList.add("active");
+}
+
+function closeMenuOnMouseOut() {
+	menu.classList.remove("active");
+}
+
+menu.addEventListener("mouseover", function(event) {
+	showMenuOnMouseOver();
+});
+menu.addEventListener("mouseout", function(event) {
+	closeMenuOnMouseOut();
+});
+showDirection.addEventListener("change", function(event) {
+	if (showDirection.checked) {
+		mapImage.src = defaultImage;
+	} else {
+		mapImage.src = directionImage;
+	}
+});
