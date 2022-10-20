@@ -260,3 +260,9 @@ body {
 	top: 0;
 	left: 0;
 }
+
+@media (max-width: 800px) {
+	.menu {
+		height: 65px;
+	}
+}

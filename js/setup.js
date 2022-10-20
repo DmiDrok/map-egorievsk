@@ -29,10 +29,10 @@ try {
 	// Настройка контента будет производиться при изменении размеров экрана браузера
 	window.addEventListener("resize", () => {
 		setInfoWidthMax();
-		setContentAllMax();
+		// setContentAllMax();
 	});
 	setInfoWidthMax();
-	setContentAllMax();
+	// setContentAllMax();
 	setCorrectHeightText();
 } catch(err) {
 	console.error(err);

@@ -49,19 +49,20 @@ let mapImage = document.querySelector(".map");
 let defaultImage = "./images/city_direction.png";
 let directionImage = "./images/city3.png";
 
-function showMenuOnMouseOver() {
+function showMenu() {
 	menu.classList.add("active");
 }
 
-function closeMenuOnMouseOut() {
+function closeMenu() {
 	menu.classList.remove("active");
 }
 
 menu.addEventListener("mouseover", function(event) {
-	showMenuOnMouseOver();
+	console.log("тутатата")
+	showMenu();
 });
 menu.addEventListener("mouseout", function(event) {
-	closeMenuOnMouseOut();
+	closeMenu();
 });
 showDirection.addEventListener("change", function(event) {
 	if (showDirection.checked) {
