@@ -1,7 +1,8 @@
 // Установить содержимое полностью на 100%
 function setContentAllMax() {
 	let html = document.documentElement;
-	html.style.height = window.innerHeight + "px";
+	if (html.clientHeight < 1000)
+		html.style.height = window.innerHeight + "px";
 }
 
 // Установка всплывающих окон в размер экрана
@@ -29,10 +30,10 @@ try {
 	// Настройка контента будет производиться при изменении размеров экрана браузера
 	window.addEventListener("resize", () => {
 		setInfoWidthMax();
-		// setContentAllMax();
+		setContentAllMax();
 	});
 	setInfoWidthMax();
-	// setContentAllMax();
+	setContentAllMax();
 	setCorrectHeightText();
 } catch(err) {
 	console.error(err);

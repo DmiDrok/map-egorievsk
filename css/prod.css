@@ -1,7 +1,8 @@
 * {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
 html {
@@ -20,16 +21,24 @@ html, body {
 body {
 	font-family: "Georgia";
 	margin: 0 auto;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 	height: 100%;
 	max-height: 1000px;
 }
 
 .wrapper {
 	position: relative;
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
 	display: inline-flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .menu {
@@ -40,11 +49,15 @@ body {
 	height: 30px;
 	background-color: #fff;
 	z-index: 150;
-	box-shadow: 0 0 5px 0 rgba(100, 100, 100, .5);
-	transition-duration: .3s;
+	-webkit-box-shadow: 0 0 5px 0 rgba(100, 100, 100, .5);
+	        box-shadow: 0 0 5px 0 rgba(100, 100, 100, .5);
+	-webkit-transition-duration: .3s;
+	        transition-duration: .3s;
 }
 
 .menu.active .container {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	opacity: 1;
 }
@@ -59,17 +72,27 @@ body {
 }
 
 .menu .container {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	height: 100%;
 }
 
 .menu .container .option {
 	cursor: pointer;
 	font-size: 25px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 
 .menu .container .option input {
@@ -91,17 +114,23 @@ body {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	object-fit: cover;
-	transition-duration: .3s;
+	-o-object-fit: cover;
+	   object-fit: cover;
+	-webkit-transition-duration: .3s;
+	        transition-duration: .3s;
 }
 
 .menu.active .arrow img {
-	transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	        transform: rotate(180deg);
 }
 
 .wrapper > .container {
 	position: relative;
-	box-shadow: 0 0 5px 0 rgba(100, 100, 100, .4);
+	-webkit-box-shadow: 0 0 5px 0 rgba(100, 100, 100, .4);
+	        box-shadow: 0 0 5px 0 rgba(100, 100, 100, .4);
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 }
 
@@ -116,10 +145,12 @@ body {
 
 .wrapper .map {
 	margin: 0 auto;
+	cursor: -webkit-grab;
 	cursor: grab;
 }
 
 .wrapper .map:active {
+	cursor: -webkit-grabbing;
 	cursor: grabbing;
 }
 
@@ -158,7 +189,8 @@ body {
 	width: 100%;
 	height: 100%;
 	border-radius: 50%;
-	object-fit: cover;
+	-o-object-fit: cover;
+	   object-fit: cover;
 	cursor: pointer;
 }
 
@@ -171,7 +203,9 @@ body {
 	background: rgba(100, 100, 100, .5);
 	z-index: 100;
 	opacity: 0;
-	transition-duration: .5s;
+	-webkit-transition-duration: .7s;
+	        transition-duration: .7s;
+	-webkit-transition-property: opacity;
 	transition-property: opacity;
 }
 
@@ -184,7 +218,8 @@ body {
 	width: 750px;
 	height: 350px;
 	background-color: #fff;
-	box-shadow: 0 0 5px 5px rgba(100, 100, 100, .4);
+	-webkit-box-shadow: 0 0 5px 5px rgba(100, 100, 100, .4);
+	        box-shadow: 0 0 5px 5px rgba(100, 100, 100, .4);
 	border-radius: 5px;
 	padding: 20px;
 	position: absolute;
@@ -192,11 +227,15 @@ body {
 	left: 50%;
 	margin-top: -175px;
 	margin-left: -375px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 }
 
 .about__row {
+	display: -ms-grid;
 	display: grid;
+	-ms-grid-columns: 50% 20px auto;
 	grid-template-columns: 50% auto;
 	grid-column-gap: 20px;
 }
@@ -210,12 +249,19 @@ body {
 	width: 100%;
 	height: 100%;
 	border-radius: 5px;
-	object-fit: cover;
+	-o-object-fit: cover;
+	   object-fit: cover;
 }
 
 .about__text {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	/*overflow-y: scroll;*/
 }
 
 .about__text .content {
