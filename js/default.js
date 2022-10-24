@@ -46,8 +46,8 @@ for (let i = 0; i < landmarks.length; i++) {
 let menu = document.querySelector(".menu");
 let showDirection = document.querySelector("input[name='show-direction']")
 let mapImage = document.querySelector(".map");
-let defaultImage = "./images/city_direction.png";
-let directionImage = "./images/city3.png";
+let defaultImage = "./images/city_dir.png";
+let directionImage = "./images/city.png";
 
 function showMenu() {
 	menu.classList.add("active");
@@ -58,7 +58,6 @@ function closeMenu() {
 }
 
 menu.addEventListener("mouseover", function(event) {
-	console.log("тутатата")
 	showMenu();
 });
 menu.addEventListener("mouseout", function(event) {
@@ -192,6 +191,7 @@ try {
 	window.addEventListener("resize", () => {
 		setInfoWidthMax();
 		setContentAllMax();
+		setCorrectHeightText();
 	});
 	setInfoWidthMax();
 	setContentAllMax();

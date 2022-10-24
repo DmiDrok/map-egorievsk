@@ -31,6 +31,7 @@ try {
 	window.addEventListener("resize", () => {
 		setInfoWidthMax();
 		setContentAllMax();
+		setCorrectHeightText();
 	});
 	setInfoWidthMax();
 	setContentAllMax();
